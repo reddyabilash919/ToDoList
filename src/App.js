@@ -24,7 +24,7 @@ function App() {
   }
 
   const fetchData = async ()=>{
-    const response = await fetch("http://localhost:3003/api/get")
+    const response = await fetch("http://3.26.53.241:3003/api/get")
     const data = await response.json();
     console.log(data);
     // setToDoList({...data});
@@ -42,7 +42,7 @@ function App() {
        const addTask = {task}
       let newId=new Date().getTime().toString();
       const colour ="white";
-      Axios.post("http://localhost:3003/api/insert",{
+      Axios.post("http://3.26.53.241:3003/api/insert",{
         id:newId,
         list : task,
         colour: colour,
@@ -61,7 +61,7 @@ function App() {
       list.id !== id);
       setToDoList(newList)
        console.log(id  + " remove id ")
-      Axios.delete(`http://localhost:3003/api/delete/${id}` )
+      Axios.delete(`http://3.26.53.241:3003/api/delete/${id}` )
     
   }
 
@@ -70,7 +70,7 @@ function App() {
       if (item.id === id) {
         const updatedItem = {
           ...item,
-          colour: "rgb(24, 218, 34)",
+          colour: "rgb(7, 245, 114)",
         };
         
     console.log(id)
@@ -81,7 +81,7 @@ function App() {
     }
     );
      console.log(id + " axios id ")
-     Axios.put("http://localhost:3003/api/update",{
+     Axios.put("http://3.26.53.241:3003/api/update",{
         id : id,
         colour: "rgb(7, 245, 114)",
     })
@@ -92,7 +92,7 @@ function App() {
   }
 
   const clearAll = ()=> {
-    Axios.delete("http://localhost:3003/api/delete/all")
+    Axios.delete("http://3.26.53.241:3003/api/delete/all")
     setToDoList([])
   }
 
