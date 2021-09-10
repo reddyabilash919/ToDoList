@@ -12,7 +12,7 @@ const Tasks= (props) => {
         <div style={{backgroundColor:colour}} className="item" key={id}>
            <h2 style={{color:textColor}}>{value}</h2>
            {
-               (colour==="rgb(24, 218, 34)") ? 
+               (colour==="rgb(7, 245, 114)") ? 
                <button className="remove-btn" onClick={()=>{
                props.remove(id)
            }}>Remove</button>
