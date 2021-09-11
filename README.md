@@ -1,5 +1,5 @@
 # ToDoList Application 
-ToDoList application will let users to add things to the list that are suppose to do in day to day life. This application will also motivate users with different motivational quotes everytime user refresh the page. 
+To Do List application is built on react js as a front end that will let users to add things to the list that are suppose to do in day to day life. This application will also motivate users with different motivational quotes everytime user refresh the page. 
 
 ## How to run the application 
 1. Clone the application or fork.
