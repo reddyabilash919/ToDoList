@@ -37,5 +37,7 @@ Future Features
 - nodemon 
 
 ## What the app looks like 
-https://github.com/reddyabilash919/ToDoList/blob/main/screenshot/Screenshot-0.png
+![](screenshot/Screenshot-0.png)
+![](screenshot/Screenshot-1.png)
+
 
