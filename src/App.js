@@ -7,6 +7,7 @@ import Axios from 'axios';
 // import uuid from 'uuid/v4';
 
 const url ='http://api.quotable.io/random';
+const app_url = "localhost"
 
 
 function App() {
@@ -24,9 +25,9 @@ function App() {
   }
 
   const fetchData = async ()=>{
-    const response = await fetch("http://3.26.53.241:3003/api/get")
+    const response = await fetch(`http://${app_url}:3003/api/get`)
     const data = await response.json();
-    console.log(data);
+    console.log( "data is " + data);
     // setToDoList({...data});
     setToDoList(data);
   }
@@ -42,7 +43,7 @@ function App() {
        const addTask = {task}
       let newId=new Date().getTime().toString();
       const colour ="white";
-      Axios.post("http://3.26.53.241:3003/api/insert",{
+      Axios.post(`http://${app_url}:3003/api/insert`,{
         id:newId,
         list : task,
         colour: colour,
@@ -61,7 +62,7 @@ function App() {
       list.id !== id);
       setToDoList(newList)
        console.log(id  + " remove id ")
-      Axios.delete(`http://3.26.53.241:3003/api/delete/${id}` )
+      Axios.delete(`http://${app_url}:3003/api/delete/${id}` )
     
   }
 
@@ -81,7 +82,7 @@ function App() {
     }
     );
      console.log(id + " axios id ")
-     Axios.put("http://3.26.53.241:3003/api/update",{
+     Axios.put(`http://${app_url}:3003/api/update`,{
         id : id,
         colour: "rgb(7, 245, 114)",
     })
@@ -92,9 +93,11 @@ function App() {
   }
 
   const clearAll = ()=> {
-    Axios.delete("http://3.26.53.241:3003/api/delete/all")
+    Axios.delete(`http://${app_url}:3003/api/delete/all`)
     setToDoList([])
   }
+
+
 
   return (
     <main>
