@@ -155,14 +155,14 @@ function App() {
       </section>
       <div className="container">
         { (toDoList.length !==0) ? 
-          <button style={{ colour:'black'}} className="btn" onClick={()=>{
+          <button style={{ colour:'black'}} className="reset-btn" onClick={()=>{
                 resetAll()
             }} >Reset</button>
             : <div> </div>
           }
         {
           (toDoList.length !==0) ? 
-          <button style={{backgroundColor:'red'}} className="btn" onClick={()=>{
+          <button  className="clearall-btn" onClick={()=>{
                 clearAll()
             }} >Clear All</button>
             : <div> </div>
