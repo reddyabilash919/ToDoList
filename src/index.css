@@ -87,6 +87,7 @@ h1 {
 }
 h2 {
   text-align: center;
+  color: black;
 }
 
 .underline {
@@ -106,11 +107,11 @@ section {
   display: inline-block;
   background: var(--clr-primary-5);
   color: var(--clr-white);
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   border-color: transparent;
   text-transform: capitalize;
-  font-size: 1rem;
+  font-size: 0.75rem;
   letter-spacing: var(--spacing);
   margin-top: 0rm;
   margin-left: 0.5rem;
@@ -118,6 +119,7 @@ section {
   cursor: pointer;
   transition: var(--transition);
 }
+
 .btn:hover {
   background: var(--clr-primary-1);
   color: var(--clr-primary-5);
@@ -144,12 +146,10 @@ input {
   display: flex;
   justify-content: space-between;
   max-width: var(--fixed-width);
-  max-height: 2.5rem;
+  max-height: 2rem;
   padding-left: 0%;
-
   margin: 1rem auto;
   align-items: center;
-
   border-radius: var(--radius);
 }
 /* .item button, */
@@ -161,7 +161,7 @@ input {
   cursor: pointer;
 }
 .item {
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
 }
 .item h4 {
   margin-bottom: 0;
@@ -210,8 +210,9 @@ input {
 .remove-btn {
   display: inline-block;
   align-items: center;
-  background: rgb(226, 15, 15);
-  color: var(--clr-white);
+  background-color: white;
+  color: red;
+  /* color: var(--clr-white); */
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   border-color: transparent;
@@ -221,14 +222,16 @@ input {
   margin-right: 0%;
   /* margin: 2rem auto; */
   cursor: pointer;
+  text-decoration: none;
   transition: var(--transition);
 }
 
 .done-btn {
   display: inline-block;
   align-items: center;
-  background: rgb(24, 218, 34);
-  color: var(--clr-white);
+  /* color: rgb(24, 218, 34); */
+  color: var(--clr-primary-5);
+  background-color: var(--clr-white);
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   border-color: transparent;
@@ -238,6 +241,7 @@ input {
   margin-right: 0%;
   /* margin: 2rem auto; */
   cursor: pointer;
+  text-decoration: none;
   transition: var(--transition);
 }
 .btn:hover {
@@ -246,13 +250,13 @@ input {
 }
 
 .done-btn:hover {
-  background: rgb(115, 235, 121);
-  color: black;
+  background: var(--clr-primary-5);
+  color: white;
 }
 
 .remove-btn:hover {
-  background: white;
-  color: red;
+  background: red;
+  color: white;
 }
 
 .container {

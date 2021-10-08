@@ -34,21 +34,23 @@ function App() {
 
   useEffect(() => {
     getQuotes();
-     fetchData();
+    fetchData();
+     
   }, [])
+
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if(task) {
-       const addTask = {task}
       let newId=new Date().getTime().toString();
-      const colour ="white";
+      const status = "created";
       Axios.post(`http://${app_url}:3003/api/insert`,{
         id:newId,
         list : task,
-        colour: colour,
+        status:status,
     })
-     setToDoList([...toDoList,{value: task, id:newId, colour:colour}])
+     setToDoList([...toDoList,{value: task, id:newId, status:status}])
       setTask('');
     }
     else {
@@ -71,7 +73,7 @@ function App() {
       if (item.id === id) {
         const updatedItem = {
           ...item,
-          colour: "rgb(7, 245, 114)",
+         status:"completed",
         };
         
     console.log(id)
@@ -84,17 +86,40 @@ function App() {
      console.log(id + " axios id ")
      Axios.put(`http://${app_url}:3003/api/update`,{
         id : id,
-        colour: "rgb(7, 245, 114)",
+        status:"completed",
     })
  
     setToDoList(newList);
+    
     
     
   }
 
   const clearAll = ()=> {
     Axios.delete(`http://${app_url}:3003/api/delete/all`)
-    setToDoList([])
+     setToDoList([])
+  }
+
+  const resetAll =() =>{
+
+    const newList = toDoList.map((item) => {
+    
+        const updatedItem = {
+          ...item,
+         status:"created",
+        };
+        
+    
+    console.log(toDoList)
+        return updatedItem;
+      }
+     
+    
+    );
+
+    Axios.put(`http://${app_url}:3003/api/reset/all`)
+    
+    setToDoList(newList);
   }
 
 
@@ -129,14 +154,24 @@ function App() {
        
       </section>
       <div className="container">
+        { (toDoList.length !==0) ? 
+          <button style={{ colour:'black'}} className="btn" onClick={()=>{
+                resetAll()
+            }} >Reset</button>
+            : <div> </div>
+          }
         {
           (toDoList.length !==0) ? 
-          <button style={{backgroundColor:'red', colour:'black'}} className="btn" onClick={()=>{
+          <button style={{backgroundColor:'red'}} className="btn" onClick={()=>{
                 clearAll()
             }} >Clear All</button>
             : <div> </div>
 
           }
+           
+         
+          
+
           
       </div>
         
