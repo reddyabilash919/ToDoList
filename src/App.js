@@ -7,6 +7,7 @@ import Axios from 'axios';
 // import uuid from 'uuid/v4';
 
 const url ='http://api.quotable.io/random';
+const app_url = "localhost"
 
 
 function App() {
@@ -24,30 +25,32 @@ function App() {
   }
 
   const fetchData = async ()=>{
-    const response = await fetch("http://3.26.53.241:3003/api/get")
+    const response = await fetch(`http://${app_url}:3003/api/get`)
     const data = await response.json();
-    console.log(data);
+    console.log( "data is " + data);
     // setToDoList({...data});
     setToDoList(data);
   }
 
   useEffect(() => {
     getQuotes();
-     fetchData();
+    fetchData();
+     
   }, [])
+
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if(task) {
-       const addTask = {task}
       let newId=new Date().getTime().toString();
-      const colour ="white";
-      Axios.post("http://3.26.53.241:3003/api/insert",{
+      const status = "created";
+      Axios.post(`http://${app_url}:3003/api/insert`,{
         id:newId,
         list : task,
-        colour: colour,
+        status:status,
     })
-     setToDoList([...toDoList,{value: task, id:newId, colour:colour}])
+     setToDoList([...toDoList,{value: task, id:newId, status:status}])
       setTask('');
     }
     else {
@@ -61,7 +64,7 @@ function App() {
       list.id !== id);
       setToDoList(newList)
        console.log(id  + " remove id ")
-      Axios.delete(`http://3.26.53.241:3003/api/delete/${id}` )
+      Axios.delete(`http://${app_url}:3003/api/delete/${id}` )
     
   }
 
@@ -70,7 +73,7 @@ function App() {
       if (item.id === id) {
         const updatedItem = {
           ...item,
-          colour: "rgb(7, 245, 114)",
+         status:"completed",
         };
         
     console.log(id)
@@ -81,20 +84,45 @@ function App() {
     }
     );
      console.log(id + " axios id ")
-     Axios.put("http://3.26.53.241:3003/api/update",{
+     Axios.put(`http://${app_url}:3003/api/update`,{
         id : id,
-        colour: "rgb(7, 245, 114)",
+        status:"completed",
     })
  
     setToDoList(newList);
     
     
+    
   }
 
   const clearAll = ()=> {
-    Axios.delete("http://3.26.53.241:3003/api/delete/all")
-    setToDoList([])
+    Axios.delete(`http://${app_url}:3003/api/delete/all`)
+     setToDoList([])
   }
+
+  const resetAll =() =>{
+
+    const newList = toDoList.map((item) => {
+    
+        const updatedItem = {
+          ...item,
+         status:"created",
+        };
+        
+    
+    console.log(toDoList)
+        return updatedItem;
+      }
+     
+    
+    );
+
+    Axios.put(`http://${app_url}:3003/api/reset/all`)
+    
+    setToDoList(newList);
+  }
+
+
 
   return (
     <main>
@@ -126,14 +154,24 @@ function App() {
        
       </section>
       <div className="container">
+        { (toDoList.length !==0) ? 
+          <button style={{ colour:'black'}} className="reset-btn" onClick={()=>{
+                resetAll()
+            }} >Reset</button>
+            : <div> </div>
+          }
         {
           (toDoList.length !==0) ? 
-          <button style={{backgroundColor:'red', colour:'black'}} className="btn" onClick={()=>{
+          <button  className="clearall-btn" onClick={()=>{
                 clearAll()
             }} >Clear All</button>
             : <div> </div>
 
           }
+           
+         
+          
+
           
       </div>
         

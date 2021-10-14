@@ -1,19 +1,18 @@
 import {React} from 'react';
-import {useState} from 'react';
 
 const Tasks= (props) => {
 
-    const [textColor, setTextColor] = useState('black')
 
-    const {colour,value, id} = props.list;
+    const {status,value, id} = props.list;
 
     return (
         <>
-        <div style={{backgroundColor:colour}} className="item" key={id}>
-           <h2 style={{color:textColor}}>{value}</h2>
+        
+        <div  className="item" key={id}>
+           <h2 style={(status==="completed")?{textDecoration:"line-through"}:{textDecoration:"none"} }>{value} </h2>
            {
-               (colour==="rgb(7, 245, 114)") ? 
-               <button className="remove-btn" onClick={()=>{
+               (status==="completed") ? 
+               <button style={{textDecoration:"none"}} className="remove-btn" onClick={()=>{
                props.remove(id)
            }}>Remove</button>
            :
