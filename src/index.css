@@ -150,6 +150,7 @@ input {
   padding-left: 0%;
   margin: 1rem auto;
   align-items: center;
+  text-transform: capitalize;
   border-radius: var(--radius);
 }
 /* .item button, */
@@ -237,6 +238,7 @@ input {
   border-color: transparent;
   text-transform: capitalize;
   font-size: 0.75rem;
+
   letter-spacing: var(--spacing);
   margin-right: 0%;
   /* margin: 2rem auto; */
@@ -252,11 +254,13 @@ input {
 .done-btn:hover {
   background: var(--clr-primary-5);
   color: white;
+  font-weight: 700;
 }
 
 .remove-btn:hover {
   background: red;
   color: white;
+  font-weight: 700;
 }
 
 .container {
@@ -302,9 +306,11 @@ input {
 .reset-btn:hover {
   color: white;
   background: var(--clr-primary-5);
+  font-weight: 700;
 }
 
 .clearall-btn:hover {
   color: white;
   background: red;
+  font-weight: 700;
 }
