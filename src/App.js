@@ -2,6 +2,7 @@
 import './App.css';
 import {useState, useEffect}  from 'react';
 import Axios from 'axios';
+import {data} from './data';
 
 // const url ='http://api.quotable.io/random';
 // const app_url = "http://13.211.180.24/"
@@ -9,8 +10,39 @@ import Axios from 'axios';
 
 function App() {
 
+  // const [value,setValues] = useState(data);
+
+  useEffect(()=>{
+   data.map((value)=>{
+     console.log(value.id);
+     console.log(value.title);
+   })
+  },[])
+
   return (
+    <div >
     <h1>uTASK</h1>
+    <div className="container">
+     {
+      data.map((value)=>{
+        return(
+        <div  key={value.id}>
+         <ul key={value.id}>
+           <li style={{"background-color":value.color}}>{value.title}</li>
+           <li>30</li>
+         </ul>
+        </div> 
+        );
+      
+      })
+    }
+    </div>
+     
+      
+
+    </div>
+  
+   
   )
 }
 
