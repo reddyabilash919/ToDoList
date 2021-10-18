@@ -2,34 +2,40 @@ export const data =[
     {
         id:"001",
         title:"Shopping",
-        color:"red"
+        color:"red",
+        total:"30"
     },
     {
          id:"002",
         title:"Reading",
-        color:"blue"
+        color:"blue",
+        total:"23"
 
     },
      {
          id:"003",
         title:"Readingsssss",
-        color:"green"
+        color:"green",
+        total:"15"
 
     },
      {
          id:"004",
         title:"Yaaaaaaasssssssss",
-        color:"brown"
+        color:"brown",
+        total:"18"
 
     },
      {
          id:"005",
-        title:"DDDDDDDD"
+        title:"DDDDDDDD",
+        total:"6"
 
     },
     {
         id:"001",
-        title:"Shopping"
+        title:"Shopping",
+        total:"18"
     },
     {
          id:"002",

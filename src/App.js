@@ -22,20 +22,27 @@ function App() {
   return (
     <div >
     <h1>uTASK</h1>
+    <div className="underline"></div>
     <div className="container">
      {
       data.map((value)=>{
         return(
         <div  key={value.id}>
          <ul key={value.id}>
-           <li style={{"background-color":value.color}}>{value.title}</li>
-           <li>30</li>
+           <li className="title-list" style={{"background-color":value.color}}>{value.title}
+            <ul className="nested-list">
+             <li style={{"background-color":value.color}}>{value.total}</li>
+           </ul>
+           </li>
+          
          </ul>
         </div> 
         );
       
       })
     }
+
+    
     </div>
      
       

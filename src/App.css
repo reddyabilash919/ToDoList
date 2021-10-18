@@ -4,17 +4,15 @@
 
 .container {
   border-radius: 2px solid black;
-  /* margin: 10px; */
+
   margin-left: 30px;
   margin-right: 0px;
 }
 ul {
-  border-radius: 2px solid black;
+  border-radius: 2px solid rgb(19, 202, 34);
 }
-li {
-  /* display: flex; */
+.title-list {
   margin: 10px;
-  /* margin-left: 50px; */
   align-items: center;
   border: 2px solid white;
   display: inline;
@@ -22,17 +20,22 @@ li {
   width: 200px;
   padding: 10px;
   float: left;
-  font-weight: 700;
-  font-size: medium;
-  border-radius: 10%;
+  font-weight: 600;
+  font-size: 1.3em;
+  border-radius: 5%;
   color: white;
   background-color: red;
 }
 
-li:hover {
+li {
+  background-color: red;
+}
+
+.title-list:hover {
   background-color: white;
   color: black;
+  font-size: 1.4em;
   font-weight: 700;
-  transition: 0.5s;
+  transition: 0.3s;
   border-color: black;
 }
