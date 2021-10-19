@@ -23,7 +23,9 @@ function App() {
     <div >
     <h1>uTASK</h1>
     <div className="underline"></div>
-    <div className="container">
+    <div className="wrapper">
+      <button className="add-btn"> Add List</button>
+      <div className="container">
      {
       data.map((value)=>{
         return(
@@ -41,15 +43,9 @@ function App() {
       
       })
     }
-
-    
     </div>
-     
-      
-
     </div>
-  
-   
+    </div>
   )
 }
 

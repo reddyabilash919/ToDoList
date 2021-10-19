@@ -21,7 +21,7 @@ export const data =[
     },
      {
          id:"004",
-        title:"Yaaaaaaasssssssss",
+        title:"Yaaaaaaasssssss",
         color:"brown",
         total:"18"
 

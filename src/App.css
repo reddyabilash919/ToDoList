@@ -2,17 +2,22 @@
   box-sizing: border-box;
 }
 
-.container {
-  border-radius: 2px solid black;
-
-  margin-left: 30px;
+.wrapper {
   margin-right: 0px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
+
+.container {
+}
+
 ul {
-  border-radius: 2px solid rgb(19, 202, 34);
 }
+
 .title-list {
-  margin: 10px;
+  margin: 5px;
   align-items: center;
   border: 2px solid white;
   display: inline;
@@ -25,6 +30,7 @@ ul {
   border-radius: 5%;
   color: white;
   background-color: red;
+  overflow: hidden;
 }
 
 li {
@@ -38,4 +44,44 @@ li {
   font-weight: 700;
   transition: 0.3s;
   border-color: black;
+}
+.add-btn {
+  float: left;
+  width: 200px;
+  height: 100px;
+  margin: 5px;
+  margin-top: 15px;
+  padding: 23px;
+  align-items: center;
+  border: 2px solid white;
+  font-weight: 600;
+  font-size: 1.3em;
+  border-radius: 5%;
+  color: white;
+  background-color: hsl(205, 78%, 60%);
+}
+@media only screen and (max-width: 712px) {
+  .wrapper {
+    margin-left: 3px;
+    /* margin-right: 5%;
+    margin-left: 3%; */
+    max-width: 100%;
+  }
+  .title-list {
+    margin-right: 5%;
+    margin-left: 3%;
+    width: 40%;
+    height: 40%;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
+  .add-btn {
+    margin-right: 5%;
+    margin-left: 3%;
+    width: 40%;
+    height: 40%;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
 }
