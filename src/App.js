@@ -147,7 +147,8 @@ function App() {
           onChange={ (e)=>{
             setTask(e.target.value);
           }}
-           autoFocus/>
+           autoFocus
+           autoComplete="off"/>
         <button className="btn" onClick={handleSubmit}  disabled={!task}>Add </button>
         </form >
        {
