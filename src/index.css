@@ -158,7 +158,7 @@ input {
   align-items: center;
   text-transform: capitalize;
   border-radius: var(--radius);
-  font-size: 0.8em;
+  /* font-size: 0.8em; */
 }
 /* .item button, */
 .item a {
@@ -328,12 +328,15 @@ button:disabled {
 .title {
   margin-top: 25px;
 }
-.header-container {
-}
+
 @media screen and (max-width: 720px) {
   .item {
     max-width: 100%;
     margin-right: 5px;
     margin-left: 5px;
+    font-size: 0.8em;
+  }
+  h1 {
+    font-size: 1.8em;
   }
 }
