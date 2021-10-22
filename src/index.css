@@ -57,14 +57,6 @@
   box-sizing: border-box;
 }
 
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -79,27 +71,33 @@ code {
     monospace;
 }
 
-h1 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+h2 {
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   background-color: hsl(184, 99%, 48%);
+  font-size: 1.5em;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-width: 2px;
+  border-radius: 12px;
+  padding: 5px;
 }
-h2 {
+h1 {
   text-align: center;
   color: black;
 }
 
 .underline {
-  width: 6rem;
-  height: 0.25rem;
+  width: 4.5rem;
+  height: 0.3rem;
   background: hsl(184, 99%, 48%);
   margin-left: auto;
   margin-right: auto;
 }
 
 section {
-  margin-top: 20px;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -150,26 +148,13 @@ input {
   padding-left: 0%;
   margin: 1rem auto;
   align-items: center;
+  text-transform: capitalize;
   border-radius: var(--radius);
-}
-/* .item button, */
-.item a {
-  background: transparent;
-  border-color: transparent;
-  color: var(--clr-primary-5);
-  letter-spacing: var(--spacing);
-  cursor: pointer;
+  /* font-size: 0.8em; */
 }
 .item {
   padding: 0.5rem 2rem;
 }
-.item h4 {
-  margin-bottom: 0;
-}
-.item p {
-  margin-bottom: 0;
-}
-
 .container {
   text-align: center;
   margin-top: 5rem;
@@ -181,38 +166,11 @@ input {
   color: rgb(204, 199, 199);
 }
 
-.container-income {
-  padding-right: 0%;
-  padding-left: 5px;
-  text-align: left;
-  margin-left: 650px;
-  margin-right: 650px;
-  background-color: rgb(19, 184, 93);
-}
-
-.income {
-  padding-left: 160px;
-}
-
-.container-expenses {
-  padding-right: 0%;
-  padding-left: 5px;
-  text-align: left;
-  margin-left: 650px;
-  margin-right: 650px;
-  background-color: rgb(223, 24, 10);
-}
-
-.expense {
-  padding-left: 150px;
-}
-
 .remove-btn {
   display: inline-block;
   align-items: center;
   background-color: white;
   color: red;
-  /* color: var(--clr-white); */
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   border-color: transparent;
@@ -220,7 +178,6 @@ input {
   font-size: 0.75rem;
   letter-spacing: var(--spacing);
   margin-right: 0%;
-  /* margin: 2rem auto; */
   cursor: pointer;
   text-decoration: none;
   transition: var(--transition);
@@ -229,7 +186,6 @@ input {
 .done-btn {
   display: inline-block;
   align-items: center;
-  /* color: rgb(24, 218, 34); */
   color: var(--clr-primary-5);
   background-color: var(--clr-white);
   padding: 0.25rem 0.5rem;
@@ -237,9 +193,9 @@ input {
   border-color: transparent;
   text-transform: capitalize;
   font-size: 0.75rem;
+
   letter-spacing: var(--spacing);
   margin-right: 0%;
-  /* margin: 2rem auto; */
   cursor: pointer;
   text-decoration: none;
   transition: var(--transition);
@@ -252,11 +208,13 @@ input {
 .done-btn:hover {
   background: var(--clr-primary-5);
   color: white;
+  font-weight: 700;
 }
 
 .remove-btn:hover {
   background: red;
   color: white;
+  font-weight: 700;
 }
 
 .container {
@@ -268,7 +226,6 @@ input {
   display: inline-block;
   color: var(--clr-primary-5);
   background: var(--clr-grey-10);
-  /* color: var(--clr-white); */
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   border-color: transparent;
@@ -302,9 +259,30 @@ input {
 .reset-btn:hover {
   color: white;
   background: var(--clr-primary-5);
+  font-weight: 700;
 }
 
 .clearall-btn:hover {
   color: white;
   background: red;
+  font-weight: 700;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+.title {
+  margin-top: 25px;
+}
+
+@media screen and (max-width: 720px) {
+  .item {
+    max-width: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 0.8em;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
 }

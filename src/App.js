@@ -7,7 +7,7 @@ import Axios from 'axios';
 // import uuid from 'uuid/v4';
 
 const url ='http://api.quotable.io/random';
-const app_url = "localhost"
+const app_url = "13.211.180.24"
 
 
 function App() {
@@ -34,9 +34,11 @@ function App() {
 
   useEffect(() => {
     getQuotes();
-    fetchData();
-     
   }, [])
+
+  useEffect(() => {
+    fetchData();
+  }, [toDoList])
 
  
 
@@ -126,14 +128,15 @@ function App() {
 
   return (
     <main>
-      <header>
-      <h1>{quotes.content}</h1>
-      </header>
-      
-         <div className="title">
-        <h2>To Do List</h2>
+       <div className="title">
+        <h1>uTask</h1>
         <div className="underline"></div>
       </div>
+      <header className="header-container">
+      <h2><i><q>{quotes.content}</q></i></h2>
+      </header>
+      
+        
 
     <section className="section">
         <form >
@@ -143,8 +146,9 @@ function App() {
           value ={task} 
           onChange={ (e)=>{
             setTask(e.target.value);
-          }}/>
-        <button className="btn" onClick={handleSubmit} >Add </button>
+          }}
+           autoFocus/>
+        <button className="btn" onClick={handleSubmit}  disabled={!task}>Add </button>
         </form >
        {
          toDoList.map((task) => {

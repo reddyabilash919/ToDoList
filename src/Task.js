@@ -9,7 +9,7 @@ const Tasks= (props) => {
         <>
         
         <div  className="item" key={id}>
-           <h2 style={(status==="completed")?{textDecoration:"line-through"}:{textDecoration:"none"} }>{value} </h2>
+           <h3 style={(status==="completed")?{textDecoration:"line-through"}:{textDecoration:"none"} }>{value} </h3>
            {
                (status==="completed") ? 
                <button style={{textDecoration:"none"}} className="remove-btn" onClick={()=>{
