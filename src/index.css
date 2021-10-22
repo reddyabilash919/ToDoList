@@ -57,14 +57,6 @@
   box-sizing: border-box;
 }
 
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -160,24 +152,9 @@ input {
   border-radius: var(--radius);
   /* font-size: 0.8em; */
 }
-/* .item button, */
-.item a {
-  background: transparent;
-  border-color: transparent;
-  color: var(--clr-primary-5);
-  letter-spacing: var(--spacing);
-  cursor: pointer;
-}
 .item {
   padding: 0.5rem 2rem;
 }
-.item h4 {
-  margin-bottom: 0;
-}
-.item p {
-  margin-bottom: 0;
-}
-
 .container {
   text-align: center;
   margin-top: 5rem;
@@ -189,38 +166,11 @@ input {
   color: rgb(204, 199, 199);
 }
 
-.container-income {
-  padding-right: 0%;
-  padding-left: 5px;
-  text-align: left;
-  margin-left: 650px;
-  margin-right: 650px;
-  background-color: rgb(19, 184, 93);
-}
-
-.income {
-  padding-left: 160px;
-}
-
-.container-expenses {
-  padding-right: 0%;
-  padding-left: 5px;
-  text-align: left;
-  margin-left: 650px;
-  margin-right: 650px;
-  background-color: rgb(223, 24, 10);
-}
-
-.expense {
-  padding-left: 150px;
-}
-
 .remove-btn {
   display: inline-block;
   align-items: center;
   background-color: white;
   color: red;
-  /* color: var(--clr-white); */
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   border-color: transparent;
@@ -228,7 +178,6 @@ input {
   font-size: 0.75rem;
   letter-spacing: var(--spacing);
   margin-right: 0%;
-  /* margin: 2rem auto; */
   cursor: pointer;
   text-decoration: none;
   transition: var(--transition);
@@ -237,7 +186,6 @@ input {
 .done-btn {
   display: inline-block;
   align-items: center;
-  /* color: rgb(24, 218, 34); */
   color: var(--clr-primary-5);
   background-color: var(--clr-white);
   padding: 0.25rem 0.5rem;
@@ -248,7 +196,6 @@ input {
 
   letter-spacing: var(--spacing);
   margin-right: 0%;
-  /* margin: 2rem auto; */
   cursor: pointer;
   text-decoration: none;
   transition: var(--transition);
@@ -279,7 +226,6 @@ input {
   display: inline-block;
   color: var(--clr-primary-5);
   background: var(--clr-grey-10);
-  /* color: var(--clr-white); */
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
   border-color: transparent;

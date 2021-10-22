@@ -7,7 +7,7 @@ import Axios from 'axios';
 // import uuid from 'uuid/v4';
 
 const url ='http://api.quotable.io/random';
-const app_url = "localhost"
+const app_url = "13.211.180.24"
 
 
 function App() {
