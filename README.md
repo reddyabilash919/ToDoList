@@ -37,7 +37,15 @@ Future Features
 - nodemon 
 
 ## What the app looks like 
-![](screenshot/Screenshot-0.png)
-![](screenshot/Screenshot-1.png)
+- Web Application (Desktop version)
+
+![](screenshot/Screenshot-web-1.png)
+![](screenshot/Screenshot-web-2.png)
+
+- Mobile Web Application
+
+![](screenshot/screenshot-mobile-1.png)
+![](screenshot/screenshot-mobile-2.png)
+
 
 
