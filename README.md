@@ -40,7 +40,7 @@ Future Features
 - Web Application (Desktop version)
 
 ![](screenshot/screenshot-web-1.png)
-![](screenshot/Screenshot-web-2.png)
+![](screenshot/screenshot-web-2.png)
 
 - Mobile Web Application
 
