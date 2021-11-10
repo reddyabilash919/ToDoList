@@ -1,5 +1,5 @@
-# ToDoList 
-To Do List application is built on react js as a front end that will let users to add things to the list that are suppose to do in day to day life. This application will also motivate users with different motivational quotes everytime user refresh the page. 
+# uTask
+uTask application is built on react js as a front end that will let users to add things to the list that are suppose to do in day to day life. This application will also motivate users with different motivational quotes everytime user refresh the page. 
 
 ## How to run the application 
 1. Clone the application or fork.
@@ -39,13 +39,13 @@ Future Features
 ## What the app looks like 
 - Web Application (Desktop version)
 
-![](screenshot/Screenshot-web-1.png)
+![](screenshot/screenshot-web-1.png)
 ![](screenshot/Screenshot-web-2.png)
 
 - Mobile Web Application
 
-![](screenshot/screenshot-mobile-1.png)
-![](screenshot/screenshot-mobile-2.png)
+![](screenshot/screenshot-mobile-1.PNG)
+![](screenshot/screenshot-mobile-2.PNG)
 
 
 
