@@ -18,9 +18,10 @@ uTask application is built on react js as a front end that will let users to add
 - A user can perform `Done` next to item added in the list 
 - A user can remove the item from list by clicking on `Remove` button next to item completed 
 - A user can clear all items in the list with `Clear All` button 
+- A user can `Reset` all items added to the list 
 
 Future Features 
-- User can create mutilple to do lists and able to added items to created lists 
+- User can create mutilple tasks list and able to added items to created task
 - User authentication will be implemented 
 
 ## Frontend Dependencies
