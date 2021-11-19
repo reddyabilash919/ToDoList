@@ -37,16 +37,20 @@ Future Features
 - nodemon 
 
 ## What the app looks like 
+
+- Mobile Web Application
+
+<div style="padding-right:20px;"> 
+  <img src="screenshot/screenshot-mobile-2.PNG" width="380px" height="824px"/>
+<img src="screenshot/screenshot-mobile-1.PNG" width="380px" height="824px"/>
+</div>
+
 - Web Application (Desktop version)
 
 ![](screenshot/screenshot-web-1.png)
 ![](screenshot/screenshot-web-2.png)
 
-- Mobile Web Application
-<div style="padding-right:20px;"> 
-  <img src="screenshot/screenshot-mobile-2.PNG" width="380px" height="824px"/>
-<img src="screenshot/screenshot-mobile-1.PNG" width="380px" height="824px"/>
-</div>
+
 
 
 <!-- ![](screenshot/screenshot-mobile-1.PNG)
