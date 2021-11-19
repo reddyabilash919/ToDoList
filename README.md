@@ -43,7 +43,7 @@ Future Features
 ![](screenshot/screenshot-web-2.png)
 
 - Mobile Web Application
-<div> 
+<div style="padding-right:10px"> 
   <img src="screenshot/screenshot-mobile-2.PNG" width="380px" height="824px"/>
 <img src="screenshot/screenshot-mobile-1.PNG" width="380px" height="824px"/>
 </div>
